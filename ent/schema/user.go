@@ -1,6 +1,7 @@
 package schema
 
 import (
+	"entgo.io/bug/lib_a_b"
 	"entgo.io/ent"
 	"entgo.io/ent/schema/field"
 )
@@ -15,6 +16,7 @@ func (User) Fields() []ent.Field {
 	return []ent.Field{
 		field.Int("age"),
 		field.String("name"),
+		field.JSON("record", lib_a_b.Record{}),
 	}
 }
 
